@@ -1,0 +1,50 @@
+<mvc:View controllerName="INVENIO.COMODATA_CRUDQ.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Button text='Go' press="loadData"></Button>
+					<Table id="idProductsTable" inset="false" items="{TableModel>/results}">
+						<headerToolbar>
+							<Toolbar>
+								<content>
+									<Title text="MATERIAL" level="H2"/>
+									<ToolbarSpacer/>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="MATNR"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="ERNAM"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true">
+								<Text text="MTART"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true">
+								<Text text="MATKL"/>
+							</Column>
+							<Column >
+								<Text text="MEINS"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{TableModel>MATNR}"/>
+									<Text text="{TableModel>ERNAM}"/>
+									<Text text="{TableModel>MTART}"/>
+									<Text text="{TableModel>MATKL}"/>
+									<Text text="{TableModel>MEINS}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
